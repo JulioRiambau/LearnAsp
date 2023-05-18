@@ -1,0 +1,31 @@
+﻿@model Vidly2.ViewModels.IndexMoviewsViewModel
+
+@{
+    ViewBag.Title = "Movies";
+}
+
+<h2>Movies</h2>
+
+@if (Model.Movies.Count == 0)
+{
+    <p>We have no movies.</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Movies</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var movie in Model.Movies)
+        {
+            <tr>
+                <td> @Html.ActionLink(movie.Name, "Details", "Movies", new { id = movie.Id }, null)</td>
+            </tr>
+
+        }
+        </tbody>
+    </table>
+}
