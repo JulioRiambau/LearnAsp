@@ -77,3 +77,14 @@ C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.csproj.CoreCom
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.csproj.CopyComplete
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.dll
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.pdb
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\bin\EntityFramework.dll
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\bin\EntityFramework.SqlServer.dll
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\bin\EntityFramework.xml
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\bin\EntityFramework.SqlServer.xml
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.InitialModel.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.csproj.GenerateResource.cache
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddIsSubscribedToCustomer.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddMembershipType.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddsMembershipTypeDbSet.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMembership.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.ApplyAnotationsToCustomerName.resources

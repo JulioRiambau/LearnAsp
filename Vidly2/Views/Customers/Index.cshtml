@@ -1,4 +1,5 @@
-﻿@model Vidly2.ViewModels.IndexCustomersViewModel
+﻿@using Vidly2.Models
+@model List<Vidly2.Models.Customer>
 
 
 @{
@@ -7,7 +8,7 @@
 
 <h2>Customers</h2>
 
-@if (Model.Customers.Count == 0)
+@if (!Model.Any())
 {
     <p>We have no customers.</p>
 }
@@ -17,10 +18,11 @@ else
         <thead>
             <tr>
                 <th>Customer</th>
+                <th>Discount Rate</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var customer in Model.Customers)
+            @foreach (Customer customer in Model)
             {
                 <tr>
                     <td>
@@ -29,6 +31,7 @@ else
                             id = customer.Id
                         }, null)
                     </td>
+                    <td>@customer.MembershipType.DiscountRate</td>
                 </tr>
 
             }
