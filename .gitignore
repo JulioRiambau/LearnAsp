@@ -1,0 +1,23 @@
+# ASP.NET
+## Ignore Visual Studio files
+*.suo
+*.user
+*.sln.docstates
+*.vs
+
+## Ignore the NuGet packages folder
+/packages/
+
+## Ignore build output
+/bin/
+/obj/
+
+## Ignore NuGet package restore
+/.nuget/
+/*.nuget.props
+/*.nuget.targets
+
+## Ignore .NET Core build artifacts
+/project.lock.json
+/project.fragment.lock.json
+artifacts/
