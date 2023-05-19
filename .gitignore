@@ -9,7 +9,7 @@
 /packages/
 
 ## Ignore build output
-*/*/bin/
+**/bin/
 */obj/
 
 ## Ignore NuGet package restore
