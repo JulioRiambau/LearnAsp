@@ -88,3 +88,9 @@ C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.Add
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.AddsMembershipTypeDbSet.resources
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.PopulateMembership.resources
 C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.ApplyAnotationsToCustomerName.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.addsNameToMembershipType.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.fillMembershipTypeName.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.customerBirthdate.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.adjustbirthday.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.movieGenre.resources
+C:\Projects\Udemy\ASP MVC\01 Start\Vidly2\Vidly2\obj\Debug\Vidly2.Migrations.populateMovieGenres.resources

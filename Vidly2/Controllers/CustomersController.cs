@@ -12,14 +12,6 @@ namespace Vidly2.Controllers
 {
     public class CustomersController : Controller
     {
-        //public List<Customer> customers = new List<Customer>()
-        //{
-        //    new Customer { Id = 1, Name = "julio"},
-        //    new Customer { Id = 2, Name = "antonio"},
-        //};
-
-        //public List<Customer> customers = new List<Customer>();
-
         private Vidly2Context _context;
 
         public CustomersController()
@@ -44,7 +36,7 @@ namespace Vidly2.Controllers
         [Route("customers/details/{id}")]
         public ActionResult Details(int id)
         {
-            var customer = _context.Customers.FirstOrDefault(x => x.Id == id);
+            var customer = _context.Customers.Include(c => c.MembershipType).FirstOrDefault(x => x.Id == id);
 
             if (customer == null)
             {

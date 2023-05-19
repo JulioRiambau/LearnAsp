@@ -4,19 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.Ajax.Utilities;
+
+using Vidly2.Data;
 using Vidly2.Models;
 using Vidly2.ViewModels;
+using System.Data.Entity;
 
 namespace Vidly2.Controllers
 {
     public class MoviesController : Controller
     {
 
-        public List<Movie> movies = new List<Movie>()
+        private Vidly2Context _context;
+
+        public MoviesController()
         {
-            new Movie() { Id = 1, Name = "Shrek" },
-            new Movie() { Id = 2, Name = "Wall-e" }
-        };
+            _context = new Vidly2Context();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+            base.Dispose(disposing);
+        }
 
         // GET: Movie
         public ActionResult Random()
@@ -49,7 +59,9 @@ namespace Vidly2.Controllers
 
         public ActionResult Index()
         {
-            return View(new IndexMoviewsViewModel(){Movies = movies});
+            var viewMovies = _context.Movies.Include(c => c.Genre).ToList();
+
+            return View(viewMovies);
         }
 
         [Route("movies/released/{year}/{month:range(1,12)}")]
@@ -60,7 +72,7 @@ namespace Vidly2.Controllers
 
         public ActionResult Details(int id)
         {
-            var customer = movies.FirstOrDefault(x => x.Id == id);
+            var customer = _context.Movies.Include(c => c.Genre).FirstOrDefault(x => x.Id == id);
 
             if (customer == null)
             {
