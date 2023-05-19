@@ -10,7 +10,7 @@
 
 ## Ignore build output
 **/bin/
-*/obj/
+**/obj/
 
 ## Ignore NuGet package restore
 /.nuget/
