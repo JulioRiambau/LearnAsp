@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.EnterpriseServices;
 using System.Linq;
 using System.Web;
 
@@ -13,12 +14,15 @@ namespace Vidly2.Models
         public MovieGenre Genre { get; set; }
 
         [Required]
+        [Display(Name = "Genre")]
         public int MovieGenreId { get; set; }
 
         [Required]
+        [Display(Name = "Number In Stock")]
         public int NumberInStock { get; set; }
 
         [Required]
+        [Display(Name = "Release Date")]
         public DateTime Release { get; set;}
 
         [Required]

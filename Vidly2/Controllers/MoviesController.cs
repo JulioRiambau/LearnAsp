@@ -52,10 +52,7 @@ namespace Vidly2.Controllers
             //return RedirectToAction("Index", "Home", new {page=1, sortBy="name"});
         }
 
-        public ActionResult Edit(int id)
-        {
-            return Content("id=" + id);
-        }
+        
 
         public ActionResult Index()
         {
@@ -72,14 +69,65 @@ namespace Vidly2.Controllers
 
         public ActionResult Details(int id)
         {
-            var customer = _context.Movies.Include(c => c.Genre).FirstOrDefault(x => x.Id == id);
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(x => x.Id == id);
 
-            if (customer == null)
+            if (movie == null)
             {
                 return HttpNotFound();
             }
 
-            return View(customer);
+            return View(movie);
+        }
+
+        public ActionResult New()
+        {
+            var genres = _context.MovieGenres.ToList();
+
+            var movieForm = new MovieFormViewModel
+            {
+                Genres = genres,
+            };
+
+            return View("MovieForm", movieForm);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.SingleOrDefault(x => x.Id == id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new MovieFormViewModel()
+            {
+                Movie = movie,
+                Genres = _context.MovieGenres.ToList(),
+            };
+            return View("MovieForm", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult Save(Movie movie)
+        {
+
+            if (movie.Id == 0)
+            {
+                movie.AddedToCatalog = DateTime.Today;
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.AddedToCatalog = movieInDb.AddedToCatalog;
+                movieInDb.Name = movie.Name;
+                movieInDb.Release = movie.Release;
+                movieInDb.MovieGenreId = movie.MovieGenreId;
+                movieInDb.NumberInStock = movie.NumberInStock;
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
         }
     }
 }
